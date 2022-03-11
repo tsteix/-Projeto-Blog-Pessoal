@@ -25,7 +25,7 @@ public class Tema {
 	private String descricao;
 
 											// verificar CASCADE "ALL"
-	@OneToMany(mappedBy = "tema", cascade = CascadeType.ALL) // Ligação um para muitos, Mapeando atributo "tema" da tabela Postagem
+	@OneToMany(mappedBy = "tema", cascade = CascadeType.REMOVE) // Ligação um para muitos, Mapeando atributo "tema" da tabela Postagem
 	@JsonIgnoreProperties("tema")
 	private List<Postagem> postagem;
 
